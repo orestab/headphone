@@ -1,17 +1,20 @@
-# React + Vite
+# 🎧 Aura Pro — Enterprise-Grade Product Showcase SPA
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+> Сучасний високопродуктивний односторінковий веб-додаток (SPA), розроблений на базі **React (Vite)**, **Tailwind CSS v4** та **Framer Motion**. Проєкт фокусується на реактивному управлінні станом, інкапсуляції бізнес-логіки через кастомні хуки, преміальному UI/UX дизайні та ідеальній плавности мікроанімацій.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [Переглянути наживо](https://orestab.github.io/headphone/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🏗 Архітектурний огляд та структура проєкту
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Проєкт спроєктований за принципами **Modular Component-Driven Architecture**, що забезпечує високу масштабованість, легкість тестування та розділення відповідальності (Separation of Concerns).
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
-# headphone
+```text
+src/
+├── components/          # Ізольовані UI-компоненти
+├── hooks/               # Кастомні React хуки для інкапсуляції сторонніх API та побічних ефектів
+├── assets/              # Статичні ресурси та медіа-файли
+├── App.jsx              # Кореневий компонент (Root) та координатор глобального стейту
+├── index.css            # Глобальна стилізація, CSS Custom Properties та Keyframe анімації
+└── main.jsx             # Точка входу в DOM (React 18 Concurrent Root)
